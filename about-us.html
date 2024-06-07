@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Courses</title>
+    <link rel="stylesheet" href="../index.css" />
+    <link rel="stylesheet" href="../styles/course.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@200;300;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script src="../scripts/script.js" defer></script>
+    <script src="../scripts/overlay.js"></script>
+  </head>
+  <body>
+    <main class="main-content">
+      <nav class="sidebar sidebar--inactive">
+        <div class="logo-details">
+          <a href="../index.html"><i class="bx bxs-invader"></i></a>
+          <a href="../index.html"><span class="logo_name">AchieveIT</span></a>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="../pages/schools.html"
+              ><i class="bx bxs-collection"></i
+            ></a>
+            <span class="link_name"
+              ><a href="../pages/schools.html">Programs</a></span
+            >
+          </li>
+          <li class="hidden">
+            <div>
+              <div class="link_title">
+                <i class="bx bxs-book-bookmark"></i>
+                <span class="link_name"><a href="#">Languages</a></span>
+                <i class="bx bxs-chevron-down arrow"></i>
+              </div>
+              <ul class="sub-menu hidden">
+                <li>
+                  <a href="../pages/languages/javascript.html">JavaScript</a>
+                </li>
+                <li><a href="#">C#</a></li>
+                <li><a href="#">HTML & CSS</a></li>
+                <li><a href="#">Python</a></li>
+                <li><a href="#">C++</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="../pages/careers.html"><i class="bx bxs-briefcase"></i></a>
+            <span class="link_name"
+              ><a href="../pages/careers.html">Career</a></span
+            >
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <header class="header"><i class="bx bx-menu"></i></header>
+        <!-- THIS IS WHERE MAIN CONTENT FOR PAGES GO -->
+        <div class="content">
+          <div class="category__container">
+            <h2>ABOUT US</h2>
+            <div class="card-grid">
+              <div class="card">
+                <p>
+                  Welcome to Achieve IT, your online hub tailored specifically
+                  for high school students navigating the ICT strand. Whether
+                  you're charting your educational path or contemplating future
+                  career prospects, Achieve IT is your trusted advisor. We
+                  specialize in recommending college institutions offering
+                  ICT-related courses, ensuring you find the perfect fit for
+                  your academic journey. Additionally, we offer invaluable
+                  insights into the diverse array of careers within the ICT
+                  field, along with the programming languages essential to each
+                  specialization. With Achieve IT by your side, you'll have the
+                  guidance and resources needed to thrive as an ICT student and
+                  beyond.
+                </p>
+              </div>
+            </div>
+            <div class="card-grid" id="members">
+              <div class="card">
+                <h4>Members:</h4>
+                <ul>
+                  <li>Agullo, Ralph Gabriel R.</li>
+                  <li>Atienza, Jerico Bryan M.</li>
+                  <li>Bernardino, Christian Gezer B.</li>
+                  <li>Catingcoy, Mark Lester A.</li>
+                  <li>Felices, Ely Loider E.</li>
+                  <li>Mojica, Rachelle Mae S.</li>
+                  <li>Montalbo, Jullian Neil B.</li>
+                  <li>Porlas, Irish Nicole G.</li>
+                  <li>Tago-o, Ella Mae O.</li>
+                  <li>Villanueva, Gwyneth Vienne G.</li>
+                  <div class="gostpayter hidden">                    
+                  </div>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      const arrow = document.querySelector("li:has(.sub-menu)");
+      const menu = document.querySelector("header .bx-menu");
+      const navigation = document.querySelector(".sidebar");
+      const malupet = document.getElementById("malupet");
+
+      malupet.addEventListener("click", () => {
+        const gostpayter = document.querySelector(".gostpayter");
+        gostpayter.classList.toggle("hidden");
+        gostpayter.classList.contains("hidden")
+          ? (malupet.innerHTML = "Show More")
+          : (malupet.innerHTML = "Show Less");
+      });
+
+      arrow.addEventListener("click", () => {
+        navigation.classList.remove("sidebar--inactive");
+        document.querySelector(".sub-menu").classList.toggle("hidden");
+      });
+
+      menu.addEventListener("click", () => {
+        navigation.classList.toggle("sidebar--inactive");
+        document.querySelector(".sub-menu").classList.add("hidden");
+      });
+    </script>
+  </body>
+</html>

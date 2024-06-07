@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Courses</title>
+    <link rel="stylesheet" href="../../index.css" />
+    <link rel="stylesheet" href="../../styles/course.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@200;300;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="main-content">
+      <nav class="sidebar sidebar--inactive">
+        <div class="logo-details">
+          <a href="../../index.html"><i class="bx bxs-invader"></i></a>
+          <a href="../../index.html"
+            ><span class="logo_name">AchieveIT</span></a
+          >
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="../../pages/courses.html"
+              ><i class="bx bxs-collection"></i
+            ></a>
+            <span class="link_name"
+              ><a href="../../pages/courses.html">Programs</a></span
+            >
+          </li>
+          <li>
+            <div>
+              <div class="link_title">
+                <i class="bx bxs-book-bookmark"></i>
+                <span class="link_name"><a href="#">Languages</a></span>
+                <i class="bx bxs-chevron-down arrow"></i>
+              </div>
+              <ul class="sub-menu hidden">
+                <li>
+                  <a href="../../pages/languages/javascript.html">JavaScript</a>
+                </li>
+                <li><a href="#">C#</a></li>
+                <li><a href="#">HTML & CSS</a></li>
+                <li><a href="#">Python</a></li>
+                <li><a href="#">C++</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="../../pages/careers.html"
+              ><i class="bx bxs-briefcase"></i
+            ></a>
+            <span class="link_name"
+              ><a href="../../pages/careers.html">Career</a></span
+            >
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <header class="header"><i class="bx bx-menu"></i></header>
+        <!-- THIS IS WHERE MAIN CONTENT FOR PAGES GO -->
+        <div class="content">
+          <div class="category__container">
+            <h2>Bachelor of Science in Computer Science</h2>
+            <div class="card-grid">
+              <a href="#" class="card">
+                <h4>Top Skills to Learn</h4>
+                <ul>
+                  <li>Machine Learning</li>
+                  <li>Artificial Intelligence</li>
+                  <li>Data Science and Analytics</li>
+                  <li>Cloud Computing</li>
+                  <li>Programming Languages</li>
+                  <li>Software Development</li>
+                  <li>Computing Algorithms</li>
+                </ul>
+                <h4>Career Opportunities</h4>
+                <ul>
+                  <li>Application Developer</li>
+                  <li>.NET Developer</li>
+                  <li>Business Analyst</li>
+                  <li>Cloud Architect</li>
+                  <li>Data Analyst</li>
+                  <li>Data Scientist</li>
+                  <li>Front-End Developer</li>
+                  <li>Full Stack Developer</li>
+                  <li>Mobile Application Developer</li>
+                  <li>Software Developer</li>
+                  <li>Software Engineer</li>
+                  <li>Software Quality Assurance Specialist</li>
+                  <li>Software Tester</li>
+                  <li>Systems Analyst</li>
+                  <li>Web Developer</li>
+                </ul>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      const arrow = document.querySelector("li:has(.sub-menu)");
+      const menu = document.querySelector("header .bx-menu");
+      const navigation = document.querySelector(".sidebar");
+
+      arrow.addEventListener("click", () => {
+        navigation.classList.remove("sidebar--inactive");
+        document.querySelector(".sub-menu").classList.toggle("hidden");
+      });
+
+      menu.addEventListener("click", () => {
+        navigation.classList.toggle("sidebar--inactive");
+        document.querySelector(".sub-menu").classList.add("hidden");
+      });
+    </script>
+  </body>
+</html>
